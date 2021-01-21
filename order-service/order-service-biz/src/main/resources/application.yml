@@ -1,0 +1,7 @@
+server:
+  port: 8020
+spring:
+  profiles:
+    active: fat
+  application:
+    name: order-service

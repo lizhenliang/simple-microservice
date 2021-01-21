@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>spring-cloud-dependencies-parent</artifactId>
+		<groupId>org.springframework.cloud</groupId>
+		<version>2.0.6.RELEASE</version>
+		<relativePath/>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>basic-common-bom</artifactId>
+	<packaging>pom</packaging>
+	<version>${simple-microservice.version}</version>
+
+	<properties>
+		<simple-microservice.version>1.0.0</simple-microservice.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<!--核心包 -->
+			<dependency>
+				<groupId>cn.simple-microservice</groupId>
+				<artifactId>basic-common-core</artifactId>
+				<version>${simple-microservice.version}</version>
+			</dependency>
+
+			<!--商品服务接口包 -->
+			<dependency>
+				<groupId>cn.simple-microservice</groupId>
+				<artifactId>product-service-api</artifactId>
+				<version>${simple-microservice.version}</version>
+			</dependency>
+
+			<!--订单服务接口包 -->
+			<dependency>
+				<groupId>cn.simple-microservice</groupId>
+				<artifactId>order-service-api</artifactId>
+				<version>${simple-microservice.version}</version>
+			</dependency>
+
+			<!--库存服务接口包 -->
+			<dependency>
+				<groupId>cn.simple-microservice</groupId>
+				<artifactId>stock-service-api</artifactId>
+				<version>${simple-microservice.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>

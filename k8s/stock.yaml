@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: stock
+  namespace: ms 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      project: ms
+      app: stock
+  template:
+    metadata:
+      labels:
+        project: ms 
+        app: stock
+    spec:
+      imagePullSecrets:
+      - name: registry-pull-secret
+      containers:
+      - name: stock
+        image: 192.168.31.90/microservice/stock:2021-01-21-18-17-52
+        imagePullPolicy: Always
+        ports:
+          - protocol: TCP
+            containerPort: 8030
+        resources:
+          requests:
+            cpu: 0.2
+            memory: 256Mi
+          limits:
+            cpu: 1
+            memory: 1Gi
+        readinessProbe:
+          tcpSocket:
+            port: 8030
+          initialDelaySeconds: 60
+          periodSeconds: 10
+        livenessProbe:
+          tcpSocket:
+            port: 8030
+          initialDelaySeconds: 60
+          periodSeconds: 10

@@ -1,0 +1,7 @@
+server:
+  port: 8030
+spring:
+  profiles:
+    active: fat
+  application:
+    name: stock-service

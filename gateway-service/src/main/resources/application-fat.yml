@@ -1,0 +1,39 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          #开启以服务id去注册中心上获取转发地址
+          enabled: true
+          ##小写serviceId
+          lower-case-service-id: true
+      routes:
+        - id: product-service
+          uri: lb://product-service
+          filters:
+            - StripPrefix=1
+          predicates:
+            - Path=/product/**
+
+        - id: order-service
+          uri: lb://order-service
+          filters:
+            - StripPrefix=1
+          predicates:
+            - Path=/order/**
+
+        - id: stock-service
+          uri: lb://stock-service
+          filters:
+            - StripPrefix=1
+          predicates:
+            - Path=/stock/**
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka-0.eureka.ms:8888/eureka,http://eureka-1.eureka.ms:8888/eureka,http://eureka-2.eureka.ms:8888/eureka

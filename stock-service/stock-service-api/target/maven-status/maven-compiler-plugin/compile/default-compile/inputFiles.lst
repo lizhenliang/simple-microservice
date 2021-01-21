@@ -1,0 +1,3 @@
+/root/simple-microservice-dev4/stock-service/stock-service-api/src/main/java/com/ctnrs/stock/api/client/StockServiceClient.java
+/root/simple-microservice-dev4/stock-service/stock-service-api/src/main/java/com/ctnrs/stock/api/constant/StockServiceNameConstant.java
+/root/simple-microservice-dev4/stock-service/stock-service-api/src/main/java/com/ctnrs/stock/api/model/Stock.java

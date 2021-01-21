@@ -1,0 +1,7 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: eureka-server
+  profiles:
+    active: fat

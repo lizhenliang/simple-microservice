@@ -1,0 +1,14 @@
+eureka:
+  server:
+    renewal-percent-threshold: 0.9
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 40000
+  instance:
+    hostname: 127.0.0.1
+    prefer-ip-address: false
+  client:
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://eureka-0.eureka.ms:${server.port}/eureka/,http://eureka-1.eureka.ms:${server.port}/eureka/,http://eureka-2.eureka.ms:${server.port}/eureka/
+    fetch-registry: true
+

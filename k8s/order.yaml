@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: order
+  namespace: ms 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      project: ms
+      app: order
+  template:
+    metadata:
+      labels:
+        project: ms 
+        app: order
+    spec:
+      imagePullSecrets:
+      - name: registry-pull-secret
+      containers:
+      - name: order
+        image: 192.168.31.90/microservice/order:2021-01-21-18-16-53
+        imagePullPolicy: Always
+        ports:
+          - protocol: TCP
+            containerPort: 8020 
+        resources:
+          requests:
+            cpu: 0.2
+            memory: 256Mi
+          limits:
+            cpu: 1
+            memory: 1Gi
+        readinessProbe:
+          tcpSocket:
+            port: 8020
+          initialDelaySeconds: 60
+          periodSeconds: 10
+        livenessProbe:
+          tcpSocket:
+            port: 8020
+          initialDelaySeconds: 60
+          periodSeconds: 10
