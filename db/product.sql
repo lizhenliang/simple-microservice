@@ -26,7 +26,7 @@ CREATE TABLE `product` (
 
 /*Data for the table `product` */
 
-insert  into `product`(`id`,`product_name`,`price`) values (1,'手机',99.990),(2,'电脑',999.000),(3,'充气娃娃',100.000),(4,'枸杞',9999.000);
+insert  into `product`(`id`,`product_name`,`price`) values (1,'手机',3999.990),(2,'电脑',9999.000),(3,'充气娃娃',600.000),(4,'枸杞',49.000);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
