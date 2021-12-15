@@ -14,7 +14,7 @@
 </head>
 <body>
 <div style="background: url('/images/bg.png')  no-repeat; height: 900px; position: relative;">
-    <#--    <a href="http://www.ctnrs.com"><img alt="容器学院-www.ctnrs.com" src="../images/logo.png"></a>-->
+    <#--    <a href="http://www.ctnrs.com"><img alt="阿良教育-www.aliangedu.cn" src="../images/logo.png"></a>-->
     <div class="page-container"
          style="width: 310px;height: 50px;background-color: #f0f3ef;left: 40%;top: 40%;position: absolute;">
         <h1 class="title"></h1>
