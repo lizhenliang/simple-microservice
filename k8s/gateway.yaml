@@ -6,7 +6,7 @@ metadata:
   namespace: ms 
 spec:
   rules:
-    - host: gateway.ctnrs.com 
+    - host: gateway.aliangedu.cn 
       http:
         paths:
         - path: /
