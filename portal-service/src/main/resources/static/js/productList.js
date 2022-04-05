@@ -3,7 +3,7 @@ $(function () {
     var table = layui.table;
     table.render({
       elem: '#productList'
-      , url: 'http://gateway.ctnrs.com/product/queryAllProduct'
+      , url: 'http://gateway.aliangedu.cn/product/queryAllProduct'
       , cellMinWidth: 80
       , page: true
       , id: 'productListReload'
