@@ -5,7 +5,7 @@ metadata:
   namespace: ms 
 spec:
   rules:
-    - host: portal.ctnrs.com 
+    - host: portal.aliangedu.cn
       http:
         paths:
         - path: /
