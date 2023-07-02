@@ -2,8 +2,7 @@
 docker_registry=192.168.1.90
 service_list="eureka-service gateway-service order-service product-service stock-service portal-service"
 service_list=${1:-${service_list}}
-work_dir=$(dirname $PWD)
-current_dir=$PWD
+work_dir=$PWD
 
 cd $work_dir
 mvn clean package -Dmaven.test.skip=true
