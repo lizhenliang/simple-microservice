@@ -1,8 +1,13 @@
 #!/bin/bash
 
-docker_registry=192.168.31.70
+docker_registry=192.168.1.90
 # 存储登录Harbor认证信息
-kubectl create secret docker-registry registry-pull-secret --docker-server=$docker_registry --docker-username=admin --docker-password=Harbor12345 --docker-email=admin@ctnrs.com -n ms
+kubectl create secret docker-registry registry-pull-secret \
+--docker-server=$docker_registry \
+--docker-username=admin \
+--docker-password=Harbor12345 \
+--docker-email=admin@ctnrs.com \
+-n ms
 
 service_list="eureka-service gateway-service order-service product-service stock-service portal-service"
 service_list=${1:-${service_list}}
