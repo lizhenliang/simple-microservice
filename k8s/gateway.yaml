@@ -5,6 +5,7 @@ metadata:
   name: gateway 
   namespace: ms 
 spec:
+  ingressClassName: nginx
   rules:
     - host: gateway.aliangedu.cn 
       http:
