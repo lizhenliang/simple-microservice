@@ -4,6 +4,7 @@ metadata:
   name: portal 
   namespace: ms 
 spec:
+  ingressClassName: nginx
   rules:
     - host: portal.aliangedu.cn
       http:
